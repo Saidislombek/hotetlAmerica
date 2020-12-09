@@ -1,0 +1,327 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="en">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>CSS. Часть №1 (Синтаксис + Обнуление)</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="assets/css/style.css"/>
+	<!--  Meta tag vieport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>	
+  <!-- Link for Google Fonts -->	
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<!-- Отображаемое тело страницы -->
+<body>
+  <!-- SVG Sprite -->
+  <svg display="none">
+    <symbol id="facebook" viewBox="0 0 485 485">
+     <g>
+       <path d="m200.765625 400h65.265625v-157.585938h43.800781s4.101563-25.429687 6.101563-53.234374h-49.648438v-36.265626c0-5.417968 7.109375-12.695312 14.15625-12.695312h35.5625v-55.21875h-48.367187c-68.476563 0-66.871094 53.082031-66.871094 61.007812v43.355469h-31.769531v53.03125h31.769531zm0 0"/>
+      <path d="m0 0v485h485v-485zm455 455h-425v-425h425zm0 0"/>
+     </g>
+    </symbol>
+
+     <symbol id="vkontakte" viewBox="0 0 485 485">
+     <g>
+      <path d="m144.753906 275.964844c12.160156 16.476562 26.132813 31.046875 44.183594 41.355468 20.441406 11.683594 42.449219 15.207032 65.660156 14.132813 10.84375-.519531 14.105469-3.347656 14.605469-14.152344.335937-7.402343 1.191406-14.785156 4.835937-21.4375 3.582032-6.523437 9.015626-7.757812 15.285157-3.699219 3.121093 2.050782 5.75 4.617188 8.238281 7.363282 6.109375 6.667968 12.023438 13.574218 18.351562 20.023437 7.957032 8.101563 17.394532 12.875 29.234376 11.902344l45.875.019531c7.382812-.5 11.222656-9.550781 6.984374-17.816406-2.984374-5.769531-6.902343-10.902344-11.042968-15.882812-9.375-11.261719-20.421875-20.859376-30.867188-31.046876-9.414062-9.191406-10.011718-14.527343-2.449218-25.132812 8.277343-11.585938 17.152343-22.710938 25.492187-34.234375 7.78125-10.765625 15.765625-21.515625 19.839844-34.390625 2.609375-8.21875.300781-11.839844-8.09375-13.292969-1.453125-.238281-2.964844-.238281-4.4375-.238281l-49.917969-.0625c-6.148438-.097656-9.53125 2.589844-11.703125 8.039062-2.945313 7.367188-5.96875 14.730469-9.476563 21.816407-7.917968 16.121093-16.777343 31.703125-29.195312 44.878906-2.746094 2.902344-5.792969 6.585937-10.367188 5.074219-5.710937-2.089844-7.402343-11.519532-7.304687-14.703125l-.042969-57.621094c-1.109375-8.214844-2.945312-11.898437-11.121094-13.496094h-51.847656c-6.902344 0-10.386718 2.691407-14.089844 7.007813-2.109374 2.511718-2.769531 4.121094 1.613282 4.957031 8.59375 1.628906 13.472656 7.203125 14.746094 15.824219 2.050781 13.792968 1.910156 27.640625.71875 41.472656-.339844 4.039062-1.035157 8.0625-2.632813 11.84375-2.503906 5.949219-6.566406 7.144531-11.878906 3.484375-4.792969-3.304687-8.175781-7.960937-11.503907-12.636719-12.4375-17.578125-22.347656-36.519531-30.449218-56.425781-2.328125-5.753906-6.367188-9.234375-12.457032-9.335937-14.96875-.238282-29.953124-.273438-44.941406.019531-8.996094.160156-11.683594 4.539062-8 12.71875 16.300782 36.28125 34.453125 71.546875 58.15625 103.671875zm0 0"/>
+      <path d="m0 0v485h485v-485zm455 455h-425v-425h425zm0 0"/> 
+     </g>      
+    </symbol>
+
+    <symbol id="instagram" viewBox="0 0 388 388">
+      <g>
+        <path d="m0 0v388h388v-388zm364 364h-340v-340h340zm0 0"/>
+        <path d="m256.425781 68.035156h-124.847656c-35.050781 0-63.5625 28.515625-63.5625 63.5625v124.847656c0 35.050782 28.511719 63.558594 63.5625 63.558594h124.847656c35.050781 0 63.558594-28.507812 63.558594-63.558594v-124.847656c0-35.046875-28.507813-63.5625-63.558594-63.5625zm36.140625 188.410156c0 19.929688-16.214844 36.144532-36.140625 36.144532h-124.847656c-19.925781 0-36.140625-16.214844-36.140625-36.144532v-124.847656c0-19.925781 16.214844-36.136718 36.140625-36.136718h124.847656c19.925781 0 36.140625 16.210937 36.140625 36.136718zm0 0"/>
+        <path d="m260.980469 142.546875c-8.46875 0-15.359375-6.886719-15.359375-15.355469 0-8.464844 6.890625-15.351562 15.359375-15.351562s15.355469 6.886718 15.355469 15.351562c0 8.46875-6.886719 15.355469-15.355469 15.355469zm0 0"/>
+        <path d="m193.996094 129.128906c-35.777344 0-64.890625 29.109375-64.890625 64.890625s29.113281 64.894531 64.890625 64.894531c35.785156 0 64.898437-29.113281 64.898437-64.894531 0-35.777343-29.113281-64.890625-64.898437-64.890625zm0 102.371094c-20.652344 0-37.472656-16.816406-37.472656-37.480469 0-20.65625 16.820312-37.464843 37.472656-37.464843 20.664062 0 37.472656 16.808593 37.472656 37.464843 0 20.664063-16.808594 37.480469-37.472656 37.480469zm0 0"/> 
+            </g>
+    </symbol>
+
+     <symbol id="youtube" viewBox="0 0 485 485">
+      <g>
+        <path d="m124.535156 347.921875c39.058594 4.351563 78.585938 4.378906 117.949219 4.351563 39.375.027343 78.910156 0 117.953125-4.351563 16.492188-1.84375 30.195312-14.210937 34.054688-30.960937 5.492187-23.847657 5.507812-49.902344 5.507812-74.464844 0-24.558594.050781-50.601563-5.445312-74.449219-3.859376-16.765625-17.558594-29.117187-34.058594-30.957031-39.054688-4.367188-78.589844-4.382813-117.945313-4.367188-39.363281-.015625-78.910156 0-117.972656 4.367188-16.476563 1.839844-30.179687 14.191406-34.023437 30.957031-5.488282 23.847656-5.554688 49.890625-5.554688 74.453125s0 50.613281 5.496094 74.460938c3.839844 16.75 17.542968 29.117187 34.039062 30.960937zm77.320313-160.691406c33.375 17.414062 66.539062 34.707031 100.136719 52.238281-33.5 17.367188-66.667969 34.574219-100.136719 51.929688zm0 0"/>
+        <path d="m0 0v485h485v-485zm455 455h-425v-425h425zm0 0"/>
+      </g>
+    </symbol>
+  </svg>
+
+	<div class="header">
+		<div class="container">
+			<div class="header-inner">
+				<div class="header-logo">
+					<img src="assets/images/header/logo.png">
+				</div>
+				<div class="nav">
+					<a href="#" class="nav-link">Home</a>
+					<a href="#" class="nav-link">About Us</a>
+					<a href="#" class="nav-link">Shop</a>
+					<a href="#" class="nav-link">Portfolio</a>
+					<a href="#" class="nav-link">Blog</a>
+					<a href="#" class="nav-link">Contact</a>
+				</div>
+			</div><!-- //header-inner -->
+		</div><!-- //container -->
+	</div><!-- //header -->
+
+	<div class="main-banner">
+		<div class="bitem1">
+			<img  class="banner-item1" src="assets/images/main-banner/banner1.jpg">
+			<p class="banner-text1">Perfection.<br><span class="banner-text2">And you are invited.</span></p>
+		</div>
+		<div class="bitem2">
+			<img class="banner-item2" src="assets/images/main-banner/banner2.jpg">
+			<img class="banner-item3" src="assets/images/main-banner/banner3.jpg">
+		</div>
+	</div>
+
+	<div class="booking">
+		<div class="container">					
+			<div class="booking-bar">							
+				<input class="arrival-input" type="text" id="id-arrival" name="arrival" placeholder="Arrival">
+				<input class="departure-input" type="text" id="id-departure" name="departure" placeholder="Departure">
+				<input class="choosearoom-input" type="text" id="id-choosearoom" name="choosearoom" placeholder="Choose a room">
+				<input class="State-input" type="text" id="id-state" name="state" placeholder="State">
+				<button class="btn-book">Book Now</button>
+				<div class="under-bkbar"></div>	
+			</div>	
+		</div>
+	</div>	
+
+	<div class="hotel-list">
+		<div class="container">
+			<p class="hotel-title">AWARD WINNING Hotels</p>
+			<div class="list-block">
+				<div class="hotel-item">
+					<img class="hotel-photo" src="assets/images/hotel-list/list1.jpg">
+					<div class="hotel-onthetext"><p>Middle of downtown</p></div>
+					<div class="hotel-text"><p>We fill the space content. High-quality, beautiful, solid and pleasant to the touch. Furniture and decoration of concrete? You to us.</p></div>
+				</div><!-- hotel-item -->
+
+				<div class="hotel-item">
+					<img class="hotel-photo" src="assets/images/hotel-list/list2.jpg">
+					<div class="hotel-onthetext"><p>Great Environment</p></div>
+					<div class="hotel-text"><p>We fill the space content. High-quality, beautiful, solid and pleasant to the touch.</p></div>
+				</div><!-- hotel-item -->
+
+				<div class="hotel-item">
+					<img class="hotel-photo" src="assets/images/hotel-list/list3.jpg">
+					<div class="hotel-onthetext"><p>Free Breakfast</p></div>
+					<div class="hotel-text"><p>We fill the space content. High-quality, beautiful, solid and pleasant to the touch.</p></div>
+				</div><!-- hotel-item -->
+
+				<div class="hotel-item">
+					<img class="hotel-photo" src="assets/images/hotel-list/list4.jpg">
+					<div class="hotel-onthetext"><p>We Clean Everyday</p></div>
+					<div class="hotel-text"><p>We fill the space content. High-quality, beautiful, solid and pleasant to the touch.</p></div>
+				</div><!-- hotel-item -->
+
+				<div class="hotel-item">
+					<img class="hotel-photo" src="assets/images/hotel-list/list5.jpg">
+					<div class="hotel-onthetext"><p>Enjoy nightlife</p></div>
+					<div class="hotel-text"><p>We fill the space content. High-quality, beautiful, solid and pleasant to the touch.</p></div>
+				</div><!-- hotel-item -->
+
+				<div class="hotel-item">
+					<img class="hotel-photo" src="assets/images/hotel-list/list6.jpg">
+					<div class="hotel-onthetext"><p>Meet New People</p></div>
+					<div class="hotel-text"><p>We fill the space content. High-quality, beautiful, solid and pleasant to the touch.</p></div>
+				</div><!-- hotel-item -->
+			</div><!-- list-block  -->
+			<div class="btn1"><button class="btn-more1">More</button></div>			
+		</div><!-- container -->
+	</div>
+
+
+	<div class="winter-activities">
+		<p class="activities-title">Winter activities</p>
+		<div class="activities">
+
+			<div class="activities-item">
+				<div class="activities-photo"><img src="assets/images/activities/activities1.jpg">
+					<p class="activities-text">Sking</p>
+					<p class="activities-suptext">We fill the space content. High-quality, beautiful, solid and</p>
+				</div>
+			</div>
+
+			<div class="activities-item">
+				<div class="activities-photo"><img src="assets/images/activities/activities2.jpg">
+					<p class="activities-text">boarding</p>
+					<p class="activities-suptext">We fill the space content. High-quality, beautiful, solid and</p>
+				</div>
+			</div>
+
+			<div class="activities-item">
+				<div class="activities-photo"><img src="assets/images/activities/activities3.jpg">
+					<p class="activities-text">Cycling</p>
+					<p class="activities-suptext">We fill the space content. High-quality, beautiful, solid and</p>
+				</div>
+			</div>
+
+			<div class="activities-item">
+				<div class="activities-photo"><img src="assets/images/activities/activities4.jpg">
+					<p class="activities-text">Hiking</p>
+					<p class="activities-suptext">We fill the space content. High-quality, beautiful, solid and</p>
+				</div>
+			</div>
+
+			<div class="activities-item">
+				<div class="activities-photo"><img src="assets/images/activities/activities5.jpg">
+					<p class="activities-text">Trekking</p>
+					<p class="activities-suptext">We fill the space content. High-quality, beautiful, solid and</p>
+				</div>
+			</div><!-- activities-item  -->
+		</div><!--activities -->		
+	</div><!--winter-activities  -->
+
+	<div class="room-viewes">
+		<div class="container">
+			<p class="viewes-title">DELUXE ROOMS WITH<br>A BEAUTIFUL VIEW</p>
+			<div class="grid-viewes">
+				<div class="div1"><img class="viewes-img" src="assets/images/room-viewes/picture1.jpg">
+					<p class="viewes-text">Magna pars studiorum</p>
+					<p class="viewes-suptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+					<div class="div2"><img class="viewes-img" src="assets/images/room-viewes/picture2.jpg">
+						<p class="viewes-text">Magna pars studiorum</p>
+						<p class="viewes-suptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+						<div class="div3"><img class="viewes-img" src="assets/images/room-viewes/picture3.jpg">
+							<p class="viewes-text">Magna pars studiorum</p>
+							<p class="viewes-suptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Nul id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare leo.</p></div>
+							<div class="div4"><img class="viewes-img" src="assets/images/room-viewes/picture4.jpg">
+								<p class="viewes-text">Magna pars studiorum</p>
+								<p class="viewes-suptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+								<div class="div5"><img class="viewes-img" src="assets/images/room-viewes/picture5.jpg">
+									<p class="viewes-text">Magna pars studiorum</p>
+									<p class="viewes-suptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+								</div><!-- grid-viewes -->
+								<div class="btn2"><button class="btn-more2">More</button></div>	
+							</div><!--container  -->
+						</div><!--room-viewes  -->
+
+						<div class="features-hotel">
+							<div class="container">
+								<div class="features">
+									<p class="features-title">Winter<br>Weather</p>
+									<p class="features-suptitle">We fill the space content. High-quality, beautiful, solid<br>and pleasant to the touch. Furniture and decoration of concrete?<br> You to us.</p>
+									<div class="btn3"><button class="btn-more3">More</button></div>	
+								</div>
+							</div>
+						</div>
+
+						<div class="fromus">
+							<div class="container">
+								<p class="fromus-title">News From Us</p>
+								<div class="features-box">
+									<div class="features-box-item">
+										<img src="assets/images/fromus/fromus1.jpg">
+										<p class="fromus-text">Sedial eiusmod tempor</p>
+										<p class="fromus-suptext">Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore... </p>
+									</div>
+
+									<div class="features-box-item">
+										<img src="assets/images/fromus/fromus2.jpg">
+										<p class="fromus-text">Sedial eiusmod tempor</p>
+										<p class="fromus-suptext">Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore... </p>
+									</div>
+
+									<div class="features-box-item">
+										<img class="fromus-img" src="assets/images/fromus/fromus3.jpg">
+										<p class="fromus-text">Sedial eiusmod tempor</p>
+										<p class="fromus-suptext">Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore... </p>
+									</div>
+								</div>
+								<div class="btn4"><button class="btn-more4">More</button></div>			
+							</div>
+						</div>
+
+						<footer class="contact">
+							<div class="container">
+								<div class="footer__inner">
+									<div class="footer_block">
+										<div class="footer-logo">
+											<img src="assets/images/header/logo.png">
+										</div>		
+										<div class="info-item">											
+											<p class="info-text"><img  class="info-icon" src="assets/images/info-box/location.png">123, Main Street, NY 456789</p>
+										</div>
+										<div class="info-item">											
+											<p class="info-text"><img  class="info-icon" src="assets/images/info-box/phone.png">+12 345 67890</p>
+										</div>
+										<div class="info-item">											
+											<p class="info-text"><img  class="info-icon" src="assets/images/info-box/mailbox.png">free@psd.in.ua</p>
+										</div>
+									</div><!--/.footer_block-->
+
+									<div class="footer_block">
+										<div class="info-nav">
+											<div class="nav-block">
+												<a href="#" class="info-link">Home</a><br>
+												<a href="#" class="info-link">About Us</a><br>
+												<a href="#" class="info-link">Shop</a><br>
+											</div>
+											<div class="nav-block">
+												<a href="#" class="info-link">Portfolio</a><br>
+												<a href="#" class="info-link">Blog</a><br>
+												<a href="#" class="info-link">Contact</a><br>
+											</div>			
+										</div>	
+									</div><!--/.footer_block-->
+
+
+									<div class="footer_block">
+
+										<div class="social">
+											<p class="soc-text">We are in social networks</p>
+                      <div class="soc-icons">
+                      <svg class="icon">
+                        <use xlink:href="#facebook"></use>                        
+                      </svg>
+                     
+                      <svg class="icon">
+                        <use xlink:href="#vkontakte"></use>                        
+                      </svg>
+										
+                      <svg class="icon">
+                        <use xlink:href="#instagram"></use>                        
+                      </svg>
+                     
+                      <svg class="icon">
+                        <use xlink:href="#youtube"></use>                        
+                      </svg>      
+                    </div><!-- soc-icons -->                    
+                    </div><!--/.social-->                    
+									</div><!--/.footer_block-->
+								</div><!--/.footer__inner-->                
+							</div>
+              <hr/>
+              <p class="reserv"> Copyright 2020. All Right Reserved </p>
+						</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</body>
+					</html>

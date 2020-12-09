@@ -1,0 +1,680 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+ background-color: #ffffff;
+ font-family: 'Bebas Neue', cursive;
+ font-family: 'Open Sans', sans-serif;
+ height: 100%;
+ width: 100%;
+ font-size: 100%;
+ line-height: 1;
+ font-size: 14px;
+ -ms-text-size-adjust: 100%;
+ -moz-text-size-adjust: 100%;
+ -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+
+.container {
+ width: 100%;
+ max-width: 1225px;
+ margin: 0 auto;
+}
+
+
+/* Свойства */
+.header {
+ padding-top: 10px;
+ padding-bottom: 30px;
+ height: 103px;
+}
+
+.header-inner {
+ align-items: center; /*выравниваем элементы по горизонтали */
+ display: flex;
+ justify-content: space-between;
+}
+
+.nav{
+ font-size: 16px;
+ font-family: 'Bebas Neue', cursive;
+ font-weight: 700;
+ text-transform: uppercase;
+}
+.nav-link {
+ padding-left: 30px;  
+ color: #0f0f0f;
+ opacity: .75;
+ transition: opacity .1s linear;
+}
+
+.nav-link:hover {
+ text-decoration: underline;
+ opacity: 1;
+}
+
+.nav-link:first-child {
+ padding-left: 0;
+} 
+
+.main-banner{
+ width: 100%;
+ height: 685px;
+ display: flex;
+ flex-direction: row;  
+}
+
+.banner-item1{
+ height: 601px;
+ width: 989px;/*989px;*/
+}
+
+.banner-item2{
+ height: 342px;
+ width: 100%;
+ /*width: 511px;*/
+}
+
+.banner-item3{
+ height: 342px;
+ width: 100%; /*width: 511px;*/  
+}
+
+.bitem1{
+ position: relative;
+} 
+
+.bitem1 p {
+ position: absolute;
+ left: 183px;  
+ width: 100%;
+ bottom: 5px;
+
+}
+
+.banner-text1{
+ font-family: 'Bebas Neue', cursive;
+ font-weight: bold;
+ text-transform: uppercase;
+ font-size: 111px;
+ color: #ffffff;
+ padding-bottom: 0px;
+ margin: 0; 
+}
+
+.banner-text2{
+ font-family: 'Bebas Neue', cursive;
+ font-weight: bold;
+ text-transform: uppercase;
+ font-size: 70px;
+ color: #000000;
+}
+/* Booking Bar */
+
+.booking-bar { 
+ margin-top: 55px;
+ margin-bottom: 115px;
+ height: 111px;
+ width: 100%; /*1141px;*/
+ background-color: #1c1c1c; 
+ position: relative;
+ z-index: 1; 
+ top: 0;
+ left: 0;     
+}
+
+.under-bkbar{  
+ position: absolute;
+ z-index: 2;
+ top: 100%;
+ left: 0;
+ height: 11px;
+ width:  100%; /*1141px;*/
+ background-color: #4e26fd;   
+}
+
+
+input{
+ margin-top: 32px; 
+ margin-right: 30px;
+ height: 50px; 
+ width: 212px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 17px;
+ font-weight: 400;
+ color: #000000;
+ padding-left: 17px;
+ padding-bottom: 18px;
+ padding-top: 18px;
+}
+
+input:first-child {
+ margin-left: 33px;
+}
+
+.btn-book{
+ background-color: #4e26fd;
+ font-family: 'Bebas Neue', cursive;
+ font-weight: 600;
+ color: #fff; 
+ text-transform: uppercase;
+ font-size: 20px;
+ height: 50px;
+ width: 167px;  
+}
+
+.btn-book:hover {  
+ color: #ffffff;
+ background-color: #1919b1;
+}
+
+
+/* Hotel List */
+
+.hotel-title{
+ font-family: 'Bebas Neue', cursive;
+ color: #000000;
+ font-size: 55px;
+ text-align: center;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 5px;
+}
+
+.hotel-list{
+ height: 900px;
+}
+
+.list-block{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ grid-row-gap: 48px;
+ grid-column-gap: 41px;
+ margin-top: 40px;
+ margin-bottom: 40px;
+}
+
+.hotel-item{
+
+}
+
+.hotel-photo{
+ width: 100%;
+}
+.hotel-onthetext{
+ margin-top: 33px;
+ margin-bottom: 20px;
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 700;
+ color: #010101;
+ font-size: 16px;  
+ text-align: center;
+}
+
+.hotel-text{ 
+ font-weight: 300;
+ font-family: 'Open Sans', sans-serif;
+ color: #010101;
+ font-size: 16px;
+ line-height: 1.5;
+ text-align: center;
+}
+
+.btn1{    
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.btn-more1 {     
+ font-family: 'Bebas Neue', cursive;
+ font-size: 24px;
+ background-color: white; 
+ color: #4e26fd; 
+ border: 2px solid #4e26fd;
+ text-transform: uppercase;
+ padding-top: 12px;
+ padding-bottom: 15px;
+ padding-left: 55px;
+ padding-right: 55px;
+ letter-spacing: 5px;   
+ margin-bottom: 57px;   
+}
+
+.btn-more1:hover{
+ background-color: #4e26fd;
+ color: white;
+}
+
+/*winter-activities*/
+
+.winter-activities{
+ height: 834px;
+}
+
+.activities-title{
+ padding-bottom: 40px;
+ padding-top: 200px;
+ font-family: 'Bebas Neue', cursive;
+ color: #000000;
+ font-size: 80px;
+ text-align: center;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 5px;
+}
+
+.activities{
+ display: grid;
+ grid-template-columns: repeat(5,1fr);
+}
+
+.activities-photo{
+ box-shadow: inset  0px -100px 130px 5px rgba(0,0,0,0.7);
+ /*inset <сдвиг по x> <сдвиг по y> <радиус размытия> <растяжение> <цвет>*/
+ position: relative;  
+}
+
+.activities-item img{
+ height: 100%;
+ width: 100%;
+ position: relative;
+ z-index: -2;
+}
+
+.activities-text{
+ font-family: 'Bebas Neue', cursive;
+ font-weight: 700;
+ color: #ffffff;
+ font-size: 50px;
+ position: absolute; 
+ left: 30px;
+ bottom: 85px;    
+}
+
+.activities-suptext{   
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 300;
+ font-size: 16px;
+ color: #ffffff;
+ position: absolute;
+ left: 30px;
+ bottom: 22px; 
+}
+
+/* Room viewes */
+
+.room-viewes{
+ height: 1040px;
+
+}
+.viewes-title{
+ padding-bottom: 80px;
+ padding-top: 200px;
+ font-family: 'Bebas Neue', cursive;
+ color: #000000;
+ font-size: 80px;
+ text-align: center;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 5px;
+}
+
+
+.grid-viewes {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-template-rows: repeat(2, 1fr);
+ grid-column-gap: 40px;
+ grid-row-gap: 30px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 2 / 1 / 3 / 2; }
+.div3 { grid-area: 1 / 2 / 3 / 3; }
+.div4 { grid-area: 1 / 3 / 2 / 4; }
+.div5 { grid-area: 2 / 3 / 3 / 4; }
+
+.viewes-text{
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 700;
+ font-size: 16px;
+ color: #010101;
+ padding-top: 20px;
+ padding-bottom: 15px;
+ padding-left: 18px
+}
+
+.viewes-suptext{
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 300;
+ font-size: 16px;
+ color: #010101;
+ padding-left: 5px;
+}
+
+.btn2{    
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.btn-more2 {     
+ font-family: 'Bebas Neue', cursive;
+ font-size: 24px;
+ background-color: white; 
+ color: #4e26fd; 
+ border: 2px solid #4e26fd;
+ text-transform: uppercase;
+ padding-top: 12px;
+ padding-bottom: 15px;
+ padding-left: 55px;
+ padding-right: 55px;
+ letter-spacing: 5px;
+ margin-top: 40px; 
+ margin-bottom: 100px;    
+}
+
+.btn-more2:hover{
+ background-color: #4e26fd;
+ color: white;
+}
+
+/* Features hotel */
+
+.features-hotel{
+ margin-top: 100px;
+ height: 554px;
+ background-image: url(../images/feature-hotel/bg-winter.jpg); /* Путь к фоновому изображению */
+ background-size: 100% 100%;
+ background-repeat: no-repeat; 
+}
+
+.features-title{
+ font-family: 'Bebas Neue', cursive;
+ font-weight: 700;
+ color: #ffffff;
+ font-size: 130px;
+ padding-top: 82px;
+ padding-right: 130px; 
+ text-align: right;
+}
+
+.features-suptitle{
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 300;
+ font-size: 16px;
+ color: #ffffff;
+ text-align: right;
+}
+
+
+.btn3{    
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+}
+
+.btn-more3 {     
+ font-family: 'Bebas Neue', cursive;
+ font-weight: 400;
+ font-size: 17px;
+ background-color: #0000ff; 
+ color: #ffffff;   
+ text-transform: uppercase;
+ padding: 21px 62px 16px 67px;   
+ letter-spacing: 5px;
+ margin-top: 67px;
+ margin-right: 280px;
+} 
+
+.btn-more3:hover{
+ background-color: #ffffff;
+ color: #4e26fd;
+}
+
+/* From us */
+.fromus{
+ height: 913px;
+}
+
+.fromus-title{
+ font-family: 'Bebas Neue', cursive;
+ font-weight: 700;
+ color: #000000;
+ font-size: 112px;  
+ text-align: center; 
+ padding: 93px 0;
+}
+
+.features-box{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ grid-column-gap: 40px;
+}
+
+.fromus-text{
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 700;
+ font-size: 16px;
+ color: #010101;
+ padding-top: 28px;
+ padding-bottom: 22px;
+}
+
+.fromus-suptext{
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 300;
+ font-size: 16px;
+ color: #010101;
+ line-height: 1.5;
+}
+
+.fromus-img{
+ height: 100%;
+}
+
+.btn4{    
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.btn-more4 {     
+ font-family: 'Bebas Neue', cursive;
+ font-size: 24px;
+ background-color: white; 
+ color: #4e26fd; 
+ border: 2px solid #4e26fd;
+ text-transform: uppercase;
+ padding-top: 12px;
+ padding-bottom: 15px;
+ padding-left: 55px;
+ padding-right: 55px;
+ letter-spacing: 5px;   
+ margin-top: 60px;  
+ margin-bottom: 75px; 
+}
+
+.btn-more4:hover{
+ background-color: #4e26fd;
+ color: white;
+}
+
+/* Contact */
+
+.contact{
+ height: 321px;
+ background-color: #252525;
+}
+
+.footer__inner {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.footer_block {
+ width: 33.33333%;  
+ padding: 0 15px;  
+}
+
+.footer-logo{
+ padding-left: 13px;
+ padding-top: 33px;
+ padding-bottom: 24px;
+}
+
+.info-text{
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 300;
+ font-size: 14px;
+ color: #ffffff;
+ align: middle;
+}
+
+.info-item{
+ padding-bottom: 25px;
+ padding-left: 20px;
+}
+
+.info-item:last-child {
+ padding-bottom: 0;
+}
+
+.info-icon{
+ padding-right: 22px;
+}
+
+.info-nav{
+ font-size: 18px;
+ font-family: 'Bebas Neue', cursive;
+ font-weight: 700;
+ text-transform: uppercase;
+ padding-top: 104px; 
+ align-items: center; /*выравниваем элементы по горизонтали */
+ display: flex;      
+}
+
+.nav-block{
+ margin-right: 84px;
+}
+
+.nav-block:last-child {
+ margin-right: 0;
+}
+
+.info-link{
+ color: #ffffff;
+ text-decoration: none;
+ opacity: .75;
+ transition: opacity .1s linear;
+ margin-bottom: 20px;
+}
+
+.info-link:hover{
+ cursor: pointer;
+ color: #4e26fd;
+}
+
+.social{
+ padding-top: 104px;
+}
+
+.soc-text{
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 400;
+ font-size: 14px;
+ color: #ffffff;
+}
+
+.icon{
+  display: block;
+  height: 42px;
+  width: 42px;
+  fill: #ffffff; 
+  padding-right: 14px;
+}
+
+.icon:hover{
+   fill: #4e26fd;     
+}
+
+.soc-icons{
+  display: flex;
+  flex-direction: row;
+  padding-top: 25px;
+  padding-left: 5px;
+}
+
+hr{ 
+    size: 3px;
+    margin-top: 42px;
+    align: center;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));    
+}
+
+.reserv{
+  padding-top: 23px;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Медиа запросы */
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+  .header-inner{
+    margin: 0 20px;
+  }
+ 
+  .banner-item1{
+    width: 100%;
+  } 
+  .banner-item2{
+    width: 100%;
+  } 
+  .banner-item3{
+    width: 100%;
+  } 
+  .banner-text1{
+  padding-right:  80px;
+  }
+  .banner-text2{
+  padding-right:  55px;
+  }
+  .booking-bar{
+    width: 100%;
+  }  
+  .footer__inner{
+    
+  }
+}
